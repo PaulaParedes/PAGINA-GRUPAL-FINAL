@@ -1,0 +1,528 @@
+
+ 	
+
+
+body {
+	box-sizing: border-box;
+ 	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	background-color:white;
+	
+}
+body header{
+
+	background-image: url(imagenes/PNG/banner2.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px ;
+    width: 100%;
+	height: 1000px;
+	
+	background-size: 100%;
+	
+}
+ header section {
+	background-color: white;
+	width: 60%;
+	clear: both;
+	content:'';
+	display: table;
+	margin: 0px 50px 50px 350px;
+
+
+}
+.menu{
+	width: 900px;
+	margin: 0 auto;
+}
+
+ header img {
+	width: 200px;
+	float: left;
+	padding: 15px 10px 5px 0px;
+}
+nav{
+	float: right;
+}
+nav ul li{
+	list-style: none;
+	margin-left: 40px;
+	padding: 25px 0px;
+	float: left;
+	
+}
+nav ul li a{
+	text-decoration:none;
+	font-weight: bold;
+	color: black;
+}
+
+header h1{
+    padding: 200px 150px 0px 0px;
+    text-align: right;
+	color: white;
+    font-size: 70px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 100px ;
+    border: 2px solid orange;
+    color: white;
+    text-decoration: none;
+    background: orange;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+    padding-top: 2%;
+    padding-left: 38% ;
+}
+
+.btn-home a {
+
+    margin: 0 10px 10px 400px;
+    font-size: 20px;
+}
+.titulo2 {
+    padding: 20px 150px 0px 0px;
+    text-align:center;
+	color: black;
+    font-size: 50px;
+
+}
+.verde{
+    width: 50px;
+    margin: 0;
+	padding: 0px 10px 5px 700px;
+
+  
+}
+.parrafo2{
+    padding: 0px 150px 0px 0px;
+    text-align:center;
+	color: black;
+    font-size: 20px;
+}
+.filtros{
+ 
+    padding: 0px 700px 0px 600px;
+}
+
+.filtros img {
+    
+    width: 30px;
+    margin: 10px;
+	display: inline-block;
+}
+/*primera parte section*/
+
+.producto{
+  
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.producto img {
+width: 100%;
+height: 100%;
+}
+.producto ul{
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+
+.producto2{
+    
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.producto2 img {
+width: 100%;
+height: 100%;
+}
+.producto2 ul{
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+.producto3{
+    
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.producto3 img {
+width: 100%;
+height: 100%;
+}
+.producto3 ul{
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+.producto4{
+    
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.producto4 img {
+width: 100%;
+height: 100%;
+}
+.producto4 ul{
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+
+.nuevosp{
+    display: flex;
+   padding-right: 300px;
+   padding-left: 200px;
+}
+
+.carrito{
+    margin: 0;
+    position: absolute;
+    top: 135%;
+    left: -28%;
+    text-align: center;
+    background-color: rgb(70, 209, 70);
+    padding-top: 5px;
+    padding-bottom: 8px;
+    width: 242px; 
+}
+.carrito img{
+    margin: 0;
+    width: 25px;
+    height: 25px;
+
+}
+/*Segunda parte section*/
+.nuevosp2{
+    display: flex;
+   padding-right: 300px;
+   padding-left: 200px;
+}
+/*Parte3*/
+.parte3{
+   margin-top: 30px;
+    background-color: orange;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.collage {
+    margin: 0;
+    width:  100%;
+
+}
+
+/*Parte4*/
+
+.carlos{
+  
+    width: 285px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.carlos img {
+width: 100%;
+height: 100%;
+}
+.carlos ul{
+    text-align: center;
+    background-color:green;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    width: 265px; 
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+
+.carmen{
+    
+    width: 285px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.carmen img {
+width: 100%;
+height: 100%;
+}
+.carmen ul{
+   
+    text-align: center;
+    background-color:green;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    width: 265px; 
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+.lucia{
+    
+    width: 285px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+
+}
+.lucia img {
+width: 100%;
+height: 100%;
+}
+.lucia ul{
+    text-align: center;
+    background-color:green;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    width: 265px; 
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+.agricultura{
+    display: flex;
+   padding-right: 300px;
+   padding-left: 200px;
+}
+/*Parte6*/
+.parte6{
+    background-color: orange;
+}
+.chicos img{
+    width: 100px;
+    padding-left: 20px;
+}
+.chicos {
+    display: flex;
+    padding-left: 530px;
+}
+/*Parte final*/
+.divisorio img{
+
+	margin: 80px 0px 0px 0px;
+	width: 100%;
+
+}
+.infof{
+	background-image: url(imagenes/PNG/Newsletter.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px ;
+	width: 100%;
+	height: 16em;
+	
+	background-size: cover;
+
+}
+
+.informacion{
+	
+	text-align: left;
+	margin: 0px 800px 0px 80px;
+	padding: 30px;
+}
+.posicion input{
+	width: 500px;
+	height: 50px;
+}
+.posicion2 a{
+	margin: 200px 250px 0px 700px;
+}
+
+footer {
+	display: flex;
+	margin: 20px;
+}
+.cuadro1{
+	background-color: white;
+height: 300px;
+}
+.cuadro1 ul li{
+	list-style: none;
+	float: left;
+	padding: 5px;
+}
+.cuadro2{
+	text-align: center;
+	background-color: white;
+	line-height: 4px;
+	width: 300px;
+	height: 300px;
+}
+.cuadro3{
+	background-color: white;
+	height: 300px;
+	margin: 0 auto;
+}
+.cuadro3 ul li{
+	margin: 0px 5px 10px 20px;
+	padding: 0px;
+	
+}
+.cuadro3 ul li img{
+	width: 80px;
+	height: 80px;
+}
+.cuadro4{
+	background-color: white;
+	line-height: 30px;
+}
+
+
+
+
+/* .producto {
+
+    
+    background-image: url(imagenes/PNG/Manzana.png);
+    background-repeat: no-repeat;
+	background-position: 0px 0px ;
+    background-size: 90%;
+    width: 250px;
+	height: 500px;
+    
+    
+
+}
+.producto ul{
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 275px 75px 20px 40px;
+    text-align: center;
+    
+}
+
+
+.producto2 {
+
+    
+    background-image: url(imagenes/PNG/Brocoli.png);
+    background-repeat: no-repeat;
+	background-position: 0px 0px ;
+    background-size: 90%;
+    width: 250px;
+	height: 500px;
+    
+
+
+}
+.producto2 ul{
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 275px 75px 20px 40px;
+    text-align: center;
+}
+.producto3 {
+
+    
+    background-image: url(imagenes/PNG/Pan.png);
+    background-repeat: no-repeat;
+	background-position: 0px 0px ;
+    background-size: 90%;
+    width: 250px;
+	height: 500px;
+
+}
+.producto3 ul{
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 275px 75px 20px 40px;
+    text-align: center;
+}
+.producto4 {
+
+    background-image: url(imagenes/PNG/Zanahoria.png);
+    background-repeat: no-repeat;
+	background-position: 0px 0px ;
+    background-size: 90%;
+    width: 250px;
+	height: 500px;
+
+}
+.producto4 ul{
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 275px 75px 20px 40px;
+    text-align: center;
+}
+
+.nuevosp{
+   margin: 10px;
+   
+}
+*/
+
+
+
+

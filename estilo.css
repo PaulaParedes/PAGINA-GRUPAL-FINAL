@@ -1,0 +1,243 @@
+
+body {
+	box-sizing: border-box;
+ 	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	background-color: white;
+	
+}
+body header{
+
+	background-image: url(imagenes/PNG/Banner.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px ;
+	height: 36em;
+	
+	background-size: cover;
+	
+}
+ header section {
+	background-color: white;
+	width: 60%;
+	clear: both;
+	content:'';
+	display: table;
+	margin: 0px 50px 50px 350px;
+}
+.menu{
+	width: 900px;
+	margin: 0 auto;
+}
+
+ header img {
+	width: 200px;
+	float: left;
+	padding: 15px 10px 5px 0px;
+}
+nav{
+	float: right;
+}
+nav ul li{
+	list-style: none;
+	margin-left: 40px;
+	padding: 25px 0px;
+	float: left;
+	
+}
+nav ul li a{
+	text-decoration:none;
+	font-weight: bold;
+	color: black;
+}
+section .parrafo{
+	background-color: white;
+    text-align:center ;
+    display: table;
+    width: 60%;
+    margin: 0px 0px 0px 100px;
+    border: 1px solid #707070;
+	opacity: 1;
+
+}
+.organico {
+	margin: 100px 112px 0px 100px;
+	width: 950px;
+	border: 1px solid #707070;
+	opacity: 1;
+}
+.titulop{
+	font: normal normal medium 33px/40px Mukta;
+	letter-spacing: 0px;
+	color: #AACC05;
+	opacity: 1;
+}
+.titulos{
+	
+	letter-spacing: 0px;
+	color: #0A0A0A;
+	opacity: 1;
+}
+.fecha{
+	
+	letter-spacing: 0px;
+	color: #2D2D2D;
+	opacity: 1;
+}
+.tips{
+	margin: 20px 20px 20px 20px;
+	letter-spacing: 0px;
+	color: #0A0A0A;
+	opacity: 1;
+}
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid green;
+    color: black;
+    text-decoration: none;
+    background: green;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+
+    margin: 0 10px 10px 400px;
+}
+
+section .blogi ul li{
+	list-style: none;
+	margin-left: 50px;
+	padding: 0px 5px ;
+	float: left;
+		
+}
+.blogi{
+	float: right;
+}
+section .contenedor {
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+section .categoria{
+	margin: 100px 100px 0px 0px;
+	display: inline-block;
+	width: 20%;
+	background-color: white;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #00000029;
+	opacity: 1;
+
+}
+
+section .categoria ul li{
+	list-style: none;
+	text-align: left;
+	font: normal normal normal 19px/20px Mukta;
+	letter-spacing: 0px;
+	color: #2D2D2D;
+	opacity: 1;
+}	
+
+section .contenedor h3{
+		text-align: left;
+		font: normal normal bold 30px/31px Mukta;
+		letter-spacing: 0px;
+		color: #0A0A0A;
+		opacity: 1;
+} 
+
+
+.buscar{
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #00000029;
+	opacity: 1;
+	border-radius: 10px;
+}
+
+.blog3{
+	margin: 10px 440px 0px 20px;
+}
+
+.divisorio img{
+
+	margin: 80px 0px 0px 0px;
+	width: 100%;
+
+}
+.infof{
+	background-image: url(imagenes/PNG/Newsletter.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px ;
+	width: 100%;
+	height: 16em;
+	
+	background-size: cover;
+
+}
+
+.informacion{
+	
+	text-align: left;
+	margin: 0px 800px 0px 80px;
+	padding: 30px;
+}
+.posicion input{
+	width: 500px;
+	height: 50px;
+}
+.posicion2 a{
+	margin: 200px 250px 0px 700px;
+}
+
+footer {
+	display: flex;
+	margin: 20px;
+}
+.cuadro1{
+	background-color: white;
+height: 300px;
+}
+.cuadro1 ul li{
+	list-style: none;
+	float: left;
+	padding: 5px;
+}
+.cuadro2{
+	text-align: center;
+	background-color: white;
+	line-height: 4px;
+	width: 300px;
+	height: 300px;
+}
+.cuadro3{
+	background-color: white;
+	height: 300px;
+	margin: 0 auto;
+}
+.cuadro3 ul li{
+	margin: 0px 5px 10px 20px;
+	padding: 0px;
+	
+}
+.cuadro3 ul li img{
+	width: 80px;
+	height: 80px;
+}
+.cuadro4{
+	background-color: white;
+	line-height: 30px;
+}
