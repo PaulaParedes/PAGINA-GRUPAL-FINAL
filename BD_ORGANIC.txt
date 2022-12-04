@@ -1,0 +1,151 @@
+DROP TABLE IF EXISTS `CLIENTES`;
+DROP TABLE IF EXISTS `PROVEEDORES`;
+DROP TABLE IF EXISTS `PRODUCTOS`;
+DROP TABLE IF EXISTS `COMPRAS`;
+DROP TABLE IF EXISTS `DETALLE_COMPRA`;
+DROP TABLE IF EXISTS `DETALLECOMPRA_PRODUCT`;
+
+CREATE TABLE `CLIENTES` (
+  `NUMERO_DOCUMENTO` int NOT NULL,
+  `TIPO_DOCUMENTO` varchar(5) default NULL,
+  `NOMBRES` varchar(255) default NULL,
+  `TELEFONO` varchar(100) default NULL,
+  `DIRECCION` varchar(255) default NULL,
+  `EMAIL` varchar(255) default NULL,
+  `ES_CLIENTE_FRECUENTE` TEXT default NULL,
+  `SUSCRIPCION_NEWSLETTER` TEXT default NULL,
+  PRIMARY KEY (`NUMERO_DOCUMENTO`)
+) ;
+
+CREATE TABLE `PROVEEDORES` (
+  `CODIGO_NIT` int NOT NULL,
+  `NOMBRE_PROVEEDOR` TEXT default NULL,
+  `NUM_TELEFONO` mediumint default NULL,
+  `DIR_PROVEEDOR` varchar(255) default NULL,
+  `CREDITO` TEXT default NULL,
+  `NOTA_CREDITO` mediumint default NULL,
+  `NOTA_DEBITO` mediumint default NULL,
+  PRIMARY KEY (`CODIGO_NIT`)
+);
+
+CREATE TABLE `PRODUCTOS` (
+  `ID` mediumint(8) unsigned NOT NULL auto_increment,
+  `ID_PROVEEDOR` int NOT NULL,
+  `NOM_PRODUCTO` TEXT default NULL,
+  `INVENTARIO_CANTIDAD` mediumint default NULL,
+  `INVENTARIO_ACTUALIZACION` mediumint default NULL,
+  `INGRESO_PEPS` varchar(255),
+  `SALIDA_PEPS` varchar(255),
+  PRIMARY KEY (`ID_PRODUCTO`),
+  FOREIGN KEY (`ID_PROVEEDOR`) REFERENCES PROVEEDORES (`CODIGO_NIT`)
+);
+
+CREATE TABLE `COMPRAS` (
+  `ID` mediumint(8) unsigned NOT NULL auto_increment,
+  `ID_CLIENTE` int NOT NULL,
+  `FECHA_COMPRA` varchar(255) default NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`ID_CLIENTE`) REFERENCES CLIENTES (`NUMERO_DOCUMENTO`)
+) AUTO_INCREMENT=1;
+
+CREATE TABLE `DETALLE_COMPRA` (
+  `ID` mediumint(8) unsigned NOT NULL auto_increment,
+  `ID_COMPRA` int NOT NULL,
+  `VALOR_COMPRA` mediumint default NULL,
+  `IVA_APLICA` TEXT default NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`ID_COMPRA`) REFERENCES COMPRAS (`ID`)
+)AUTO_INCREMENT=1;
+
+CREATE TABLE `DETALLECOMPRA_PRODUCT` (
+  `ID_DETALLE` int NOT NULL,
+  `ID_PRODUCTO` int NOT NULL,
+  PRIMARY KEY (`ID_DETALLE`),
+  PRIMARY KEY (`ID_PRODUCTO`),
+  FOREIGN KEY (`ID_DETALLE`) REFERENCES DETALLE_COMPRA (`ID`),
+  FOREIGN KEY (`ID_PRODUCTO`) REFERENCES PRODUCTOS (`ID`)
+);
+
+INSERT INTO `CLIENTES` (`NUMERO_DOCUMENTO`, `TIPO_DOCUMENTO`,`NOMBRES`,`TELEFONO`,`DIRECCION`,`EMAIL`,`ES_CLIENTE_FRECUENTE`,`SUSCRIPCION_NEWSLETTER`)
+VALUES
+  (100000,'CC','Velma Castillo','(734) 880-9385','558-1102 Neque Rd.','nulla.eget.metus@outlook.com','Cras','nec'),
+  (100001,'CC','Justin Allison','1-154-947-5251','684-6279 Eu Road','ut@yahoo.edu','Nam','dictum'),
+  (100002,'CC','Quin Cox','1-442-533-5564','943-1614 Vulputate Avenue','ipsum@protonmail.edu','volutpat.','felis'),
+  (100003,'CC','Anastasia Gardner','1-450-597-5861','P.O. Box 976, 847 Sapien Avenue','montes@icloud.ca','a','Aenean'),
+  (100004,'CC','Melyssa Lloyd','(144) 635-8381','Ap #952-8173 In Rd.','ante@yahoo.couk','Nam','sed'),
+  (100005,'CC','Lane Rowland','1-122-101-4699','9330 In, Street','erat@hotmail.org','auctor,','non,'),
+  (100006,'CC','Adele Cook','(480) 683-7425','553-9875 Lacinia St.','felis.purus@hotmail.org','tempus','sagittis'),
+  (100007,'CC','Quemby Wilson','(267) 449-8880','Ap #265-6452 Vestibulum Ave','ipsum.dolor.sit@protonmail.org','vitae,','Mauris'),
+  (100008,'CC','Austin Lancaster','1-362-618-9432','180-2611 Sagittis. Rd.','purus.iEn@aol.ca','tempus,','nonummy'),
+  (100009,'CC','Faith Leach','1-186-160-5565','Ap #951-327 Fermentum Ave','integerR.vulputate.risus@hotmail.com','ipsum','tempor'),
+  (100010,'CC','Ulysses Morton','1-898-552-0498','Ap #363-9725 Tincidunt, St.','ipsum.dolor.sit@icloud.couk','nec','at,'),
+  (100011,'CC','Lila Haney','1-547-110-2103','1300 Vitae Street','donec.est.nunc@protonmail.net','a,','gravida'),
+  (100012,'CC','Buffy Knight','1-628-136-7365','P.O. Box 529, 6101 Aliquam Avenue','lobortis.mauris.suspendisse@yahoo.edu','quam.','et'),
+  (100013,'CC','Scarlet Wooten','1-226-788-3421','Ap #760-7629 Risus. Ave','curabitur@hotmail.com','velit.','imperdiet'),
+  (100014,'CC','Ainsley Eaton','1-841-655-3256','Ap #613-9557 Pellentesque. St.','felis.purus@outlook.com','Quisque','neque'),
+  (100015,'CC','Hilary Harrell','(720) 989-1486','Ap #290-8237 Velit Avenue','faucibus.id.libero@icloud.ca','a','tellus.'),
+  (100016,'CC','Winter Leblanc','(318) 505-9747','Ap #711-3319 Sapien Av.','aliquet.diam.sed@icloud.org','egestas','neque'),
+  (100017,'CC','Ori Goff','1-221-450-3589','8570 Lacus. Rd.','fermentum.fermentum@aol.net','a,','laoreet'),
+  (100018,'CC','Madison Garrison','(719) 549-1725','1438 Enim. St.','gravida@icloud.edu','ullamcorper,','Suspendisse'),
+  (100019,'CC','Maisie Avila','1-437-866-0414','Ap #732-137 Ante St.','nulla.cras@protonmail.ca','et','justo'),
+  (100020,'CC','Zane Spears','1-755-736-7826','509-6599 Facilisi. St.','elit.aliquam.auctor@protonmail.ca','eu,','metus');
+
+INSERT INTO `PROVEEDORES` (`CODIGO_NIT`,`NOMBRE_PROVEEDOR`,`NUM_TELEFONO`,`DIR_PROVEEDOR`,`CREDITO`,`NOTA_CREDITO`,`NOTA_DEBITO`)
+VALUES
+  (1000,"vitae diam. Proin dolor. Nulla semper tellus id nunc interdum",9,"P.O. Box 350, 6468 Urna. Ave","tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem",9297,9437),
+  (1001,"ipsum. Curabitur consequat, lectus sit amet luctus vulputate, nisi sem",9,"P.O. Box 685, 6508 Eu Ave","libero. Integere inA magna. Phasellus dolor elit, pellentesque a, facilisis",7428,5347),
+  (1002,"Donec feugiat metus sit amet ante. Vivamus non lorem vitae",10,"Ap #337-8417 Fringilla Rd.","est, vitae sodales nisi magna sed dui. Fusce aliquam, enim",5686,3978),
+  (1003,"arcu iaculis enim, sit amet ornare lectus justo eu arcu.",9,"Ap #432-2791 Lobortis Street","eu, euismod ac, fermentum vel, mauris. Integere sem elit, pharetra",8125,4597),
+  (1004,"nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia",9,"5412 Ut Avenue","ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus.",8459,3716),
+  (1005,"vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac",9,"660-650 Ornare St.","elit. Aliquam auctor, velit eget laoreet posuere, enim nisl elementum",6006,9981),
+  (1006,"rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem",10,"3520 Semper, Ave","et magnis dis parturient montes, nascetur ridiculus mus. Proin vel",5978,2597),
+  (1007,"sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus",10,"920-2985 Dui. St.","mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut,",5465,4240),
+  (1008,"Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec",9,"661-7611 Dolor. Rd.","ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor.",2094,2696),
+  (1009,"nibh. Phasellus nulla. Integere vulputate, risus a ultricies adipiscing, enim",9,"3886 Urna Rd.","Integere tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum",3435,593);
+
+INSERT INTO `PRODUCTOS` (`ID_PROVEEDOR`,`NOM_PRODUCTO`,`INVENTARIO_CANTIDAD`,`INVENTARIO_ACTUALIZACION`,`INGRESO_PEPS`,`SALIDA_PEPS`)
+VALUES
+  (1000,"Leche",9,7470,"Sep 14, 2022","Mar 16, 2023"),
+  (1001,"Uva",10,4896,"Oct 31, 2022","Dec 6, 2021"),
+  (1002,"Pollo",10,2544,"May 25, 2022","Dec 9, 2022"),
+  (1003,"Pescado",10,3497,"Apr 6, 2023","Nov 2, 2022"),
+  (1004,"Manzana",9,9691,"Jan 4, 2023","Aug 4, 2023"),
+  (1005,"Bananos",10,8926,"Jan 5, 2022","Sep 26, 2023"),
+  (1006,"Papaya",9,8366,"Mar 18, 2022","May 28, 2023"),
+  (1007,"Leche de cabra",9,4918,"Jun 6, 2023","May 22, 2022"),
+  (1008,"Soya",9,2830,"Oct 9, 2023","Oct 30, 2022"),
+  (1009,"Agua",9,7118,"Oct 1, 2022","Jan 11, 2022"),
+  (1001,"Uva chilena",9,6478,"Mar 20, 2022","Nov 12, 2023");
+
+INSERT INTO `COMPRAS` (`ID_CLIENTE`,`FECHA_COMPRA`)
+VALUES
+  (100001,"Mar 16, 2023"),
+  (100002,"Mar 17, 2023"),
+  (100003,"Mar 11, 2023"),
+  (100004,"Mar 17, 2023"),
+  (100005,"Mar 10, 2023"),
+  (100006,"Mar 12, 2023"),
+  (100001,"Mar 19, 2023");
+
+INSERT INTO `DETALLE_COMPRA` (`ID_COMPRA`,`VALOR_COMPRA`,`IVA_APLICA`)
+VALUES
+  (1,56666,54554),
+  (2,100000,546),
+  (3,220000,6465),
+  (4,766666,654564),
+  (5,955555,564564),
+  (6,152,564654),
+  (7,795555,665465);
+
+INSERT INTO `DETALLECOMPRA_PRODUCT` (`ID_DETALLE`,`ID_PRODUCTO`)
+VALUES
+  (1,1),
+  (1,2),
+  (1,3),
+  (2,2),
+  (3,3),
+  (3,1),
+  (4,4),
+  (5,5),
+  (6,6),
+  (7,7);
