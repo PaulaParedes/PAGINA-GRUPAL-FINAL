@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+.title { 
+    padding-top: 100px;
+   
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+div.galeria{
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px 0 green, 0 6px 20px 0 black;
+    float: left;
+   
+    width: 450px;
+}   
+div.galeria img{
+    width: 450px;
+    height: auto;
+}
+div.galeria:hover{
+    border: 5px solid red;
+    transform: rotate(-3deg);
+}
+.fondo {
+    background: green;
+}
+.centrar{
+    
+    padding-top: 120px;
+    padding-left: 50px;
+}
